@@ -15,15 +15,43 @@ code {
     monospace;
 }
 
+.AppContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-radius: 7px;
+  margin: 1rem;
+
+}
+
+.garage{
+  display: flex;
+  flex-direction: column;
+}
+
 .nav-link {
   list-style-type: none;
- 
+}
+.car-info-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  list-style-type: none;
+  text-transform: uppercase;
+  
+  width: 22rem;
+  padding:1rem;
   
 }
-#link {
+
+
+.linked {
+  
   text-decoration: none;
   color:lawngreen
-  
 }
 
 .master-nav {
@@ -44,5 +72,5 @@ code {
 .nav-bar {
   display: flex;
   height: 3rem;
-  width: 20rem;
+  width: 30rem;
 }

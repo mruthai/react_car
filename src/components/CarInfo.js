@@ -1,57 +1,34 @@
-import { useState } from "react"
+import { Link } from 'react-router-dom'
 
-export default function Counter(props) {
-
-    const [ carCount, setCarCount] = useState(props.initialCarCount || 150)
-    const [ count, setCount ] = useState(props.initialCount || 0)
-
-    function incrementCar (incrementor) {
-        setCarCount(carCount + incrementor)
-       
-    }
-
-
-    function increment (incrementor) {
-        setCount(count + incrementor)
-      
-    }
-    
-
-   
-
+export default function Cars(props) {
     return (
-        <div>
-            <h2> { props.title || 'Number of Cars' } </h2>
-            <h4> { props.description || 'Details Unvailable'}</h4>
-            <h5> {props.color || 'Color N/A'}</h5>
-              Current Count: { count}
-            <div>
-                
-                
+        
+            <div className="AppContent">
+                <ul className="car-info-list">
+                    <li>{props.car.name}</li>
+                    <li>Year: {props.car.year}</li>
+                    <li>Selling Price: ${props.car.selling_price}</li>
+                    <li>Kilometers Drive: {props.car.year}</li>
+                    <li>Fuel Type: {props.car.fuel}</li>
 
-                
-               
-                {
-                (carCount < 0) ?
-                <button onClick={ () => incrementCar(-1) }>Decrement</button>
-                :
-                <></>
-                }
-                
+                    {
+                        (props.hidelink) ?
+                            <>
+                                <li>Seller Type: {props.car.seller_type}</li>
+                                <li>Transmission:{props.car.transmission}</li>
+                                <li>Owner: {props.car.owner}</li>
+                                <li>Fuel Efficiency: {props.car.mileage}</li>
+                                <li>Engine Type: {props.car.engine}</li>
+                                <li>Power: {props.car.max_power}</li>
+                                <li>Torque: {props.car.torque}</li>
+                                <li>Number of Seats: {props.car.seats}</li>
+                                <img src="/public/images/mechanic.png" />
+                            </> :
+                            <Link className="linked" to={`/cars/${props.car.id}`}>Read More</Link>
+                    }
+
+                </ul>
             </div>
 
-            <div>   
-                <button onClick={ () => increment(1) }>Increment</button>
-                {
-                (count > 0) ?
-                <button onClick={ () => increment(-1) }>Decrement</button>
-                :
-                <></>
-                }
-                
-            </div>
-        </div>
     )
-
 }
-
