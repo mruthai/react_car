@@ -21,9 +21,30 @@ code {
   justify-content: center;
   align-items: center;
   border-style: solid;
+  border-color: lawngreen;
   border-radius: 7px;
   margin: 1rem;
 
+}
+
+.image {
+  
+  display:flex;
+  flex-direction:  center;
+}
+
+.imageNavOne {
+  content: url("/public/images/dealer.png");
+  margin-top: 0.25rem;
+  width: 75px;
+  height: 75px;
+}
+
+.imageNavTwo {
+  content: url("/public/images/deal.png");
+  margin-top: 0.25rem;
+  width: 75px;
+  height: 75px;
 }
 
 .garage{

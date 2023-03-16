@@ -16,9 +16,6 @@ export default function Counter(props) {
       
     }
     
-
-   
-
     return (
         <div>
             <h2> { props.title || 'Number of Cars' } </h2>
@@ -26,11 +23,7 @@ export default function Counter(props) {
             <h5> {props.color || 'Color N/A'}</h5>
               Current Count: { count}
             <div>
-                
-                
-
-                
-               
+                      
                 {
                 (carCount < 0) ?
                 <button onClick={ () => incrementCar(-1) }>Decrement</button>
