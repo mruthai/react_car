@@ -1,6 +1,6 @@
 import { useState, useEffect, createContext, useContext } from "react";
-import { getFirestore, getDocs, collection, getDoc, doc } from '@firebase/firestore'
-
+import { getFirestore, getDocs, collection, getDoc, doc, collectionGroup, query } from '@firebase/firestore'
+import { AuthContext } from './AuthProvider'
 export const DataContext = createContext()
 
 export const DataProvider = function(props) {
