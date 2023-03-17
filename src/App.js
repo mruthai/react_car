@@ -47,12 +47,8 @@ function App() {
         <Route path="/" element={<Home />} />
           <Route path="/inventorycount" element={<InventoryCount />} />
           <Route path="/cars/:id" element={<CarId />} />
-          <Route path="/profile/" element={ <Protected user={user}>
-          <Profile />
-        <Route path="/inventory" element={<Inventory/>} />
-        </Protected>
-      } 
-        />
+           <Route path="/inventory" element={<Inventory/>} />
+          <Route path="/profile/" element={ <Profile/>} />
       </Routes>
 
     </BrowserRouter>
